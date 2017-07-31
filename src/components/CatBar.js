@@ -115,8 +115,8 @@ handleOptionChange(eventTarget) {
 
   render() {
     return (
-      <div className="row card-container">
-        <div className="card col-md-2">
+      <div className="catBarColumn">
+        <div className="card">
           <AllCategories/>
           <ShopLocation/>
           <ItemType/>
@@ -128,8 +128,8 @@ handleOptionChange(eventTarget) {
         {this.state.listingFilter.length > 0
           ? (
 
-            <div className="CatBodyCards-controller col-md-10 row">
-              <ProductCards className="col-md-10"
+            <div className="card-container">
+              <ProductCards className="grid-items col-md-4"
                 listingFilter={this.state.listingFilter}
                 under25={this.state.under25}
                 between25_50={this.state.between25_50}

@@ -27,8 +27,8 @@ export default class ProductCards extends Component {
         console.log(oneProduct);
         console.log(oneProduct.User.feedback_info.score);
         return (
-          <div className="card col-md-2 product-card" key={oneProduct.index}>
-            <a href={oneProduct.url}>
+          <div className="card col-md-3 product-card" key={oneProduct.index}>
+            <a href={oneProduct.url} className="link">
               <img className="product-image" src={oneProduct.MainImage.url_170x135} />
               <div className="product-title">{oneProduct.title.substring(0, 36)}...</div>
               <div className="shop-name">{oneProduct.Shop.shop_name}</div>
@@ -83,7 +83,7 @@ export default class ProductCards extends Component {
                 ) : (
                   <span></span>
                 )}
-                <span>({oneProduct.num_favorers})</span>
+                <span className="total-reviews">({oneProduct.num_favorers})</span>
               <div className="price">${oneProduct.price}</div>
             </a>
           </div>
@@ -103,8 +103,8 @@ export default class ProductCards extends Component {
         console.log(oneProduct);
         console.log(oneProduct.User.feedback_info.score);
         return (
-          <div className="card col-md-2 product-card" key={oneProduct.user_id}>
-            <a href={oneProduct.url}>
+          <div className="card col-md-3 product-card" key={oneProduct.user_id}>
+            <a href={oneProduct.url} className="link">
               <img className="product-image" src={oneProduct.MainImage.url_170x135} />
               <div className="product-title">{oneProduct.title.substring(0, 36)}...</div>
               <div className="shop-name">{oneProduct.Shop.shop_name}</div>
@@ -159,7 +159,7 @@ export default class ProductCards extends Component {
                 ) : (
                   <span></span>
                 )}
-                <span>({oneProduct.num_favorers})</span>
+                <span className="total-reviews">({oneProduct.num_favorers})</span>
               <div className="price">${oneProduct.price}</div>
             </a>
           </div>
@@ -179,8 +179,8 @@ export default class ProductCards extends Component {
         console.log(oneProduct);
         console.log(oneProduct.User.feedback_info.score);
         return (
-          <div className="card col-md-2 product-card" key={oneProduct.User.user_id}>
-            <a href={oneProduct.url}>
+          <div className="card col-md-3 product-card" key={oneProduct.User.user_id}>
+            <a href={oneProduct.url} className="link">
               <img className="product-image" src={oneProduct.MainImage.url_170x135} />
               <div className="product-title">{oneProduct.title.substring(0, 36)}...</div>
               <div className="shop-name">{oneProduct.Shop.shop_name}</div>
@@ -235,7 +235,7 @@ export default class ProductCards extends Component {
                 ) : (
                   <span></span>
                 )}
-                <span>({oneProduct.num_favorers})</span>
+                <span className="total-reviews">({oneProduct.num_favorers})</span>
               <div className="price">${oneProduct.price}</div>
             </a>
           </div>
@@ -255,8 +255,8 @@ validListings = activeListings.filter((validListings) => {
     console.log(oneProduct);
     console.log(oneProduct.User.feedback_info.score);
     return (
-      <div className="card col-md-2 product-card" key={oneProduct.MainImage.listing_image_id}>
-        <a href={oneProduct.url}>
+      <div className="card col-md-3 product-card" key={oneProduct.MainImage.listing_image_id}>
+        <a href={oneProduct.url} className="link">
           <img className="product-image" src={oneProduct.MainImage.url_170x135} />
           <div className="product-title">{oneProduct.title.substring(0, 36)}...</div>
           <div className="shop-name">{oneProduct.Shop.shop_name}</div>
@@ -311,7 +311,7 @@ validListings = activeListings.filter((validListings) => {
             ) : (
               <span></span>
             )}
-            <span>({oneProduct.num_favorers})</span>
+            <span className="total-reviews">({oneProduct.num_favorers})</span>
           <div className="price">${oneProduct.price}</div>
         </a>
       </div>
@@ -330,8 +330,8 @@ validListings = activeListings.filter((validListings) => {
     console.log(oneProduct);
     console.log(oneProduct.User.feedback_info.score);
     return (
-      <div className="card col-md-2 product-card" key={oneProduct.Shop.shop_id}>
-        <a href={oneProduct.url}>
+      <div className="card col-md-3 product-card" key={oneProduct.Shop.shop_id}>
+        <a href={oneProduct.url} className="link">
           <img className="product-image" src={oneProduct.MainImage.url_170x135} />
           <div className="product-title">{oneProduct.title.substring(0, 36)}...</div>
           <div className="shop-name">{oneProduct.Shop.shop_name}</div>
@@ -386,7 +386,7 @@ validListings = activeListings.filter((validListings) => {
             ) : (
               <span></span>
             )}
-            <span>({oneProduct.num_favorers})</span>
+            <span className="total-reviews">({oneProduct.num_favorers})</span>
           <div className="price">${oneProduct.price}</div>
         </a>
       </div>
@@ -441,7 +441,7 @@ __renderLabel() {
 
   render() {
     return (
-      <div className="row">
+      <div className="product-row">
         {this.__renderLabel()}
       </div>
     )
