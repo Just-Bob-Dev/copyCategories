@@ -5,7 +5,7 @@ import AllCategories from './CatBar/AllCategories.js';
 import Color from './CatBar/Color.js';
 import ItemType from './CatBar/ItemType.js';
 import OrderingOptions from './CatBar/OrderingOptions.js';
-import Price from './CatBar/Price.js';
+import Price_links from './CatBar/Price_links.js';
 import ShipTo from './CatBar/ShipTo.js';
 import ShopLocation from './CatBar/ShopLocation.js';
 import ProductCards from './CatBody/ProductCards.js';
@@ -88,7 +88,7 @@ export default class CatBar extends Component {
           <AllCategories />
           <ShopLocation />
           <ItemType />
-          <Price getInitialState={this.getInitialState} />
+          <Price_links getInitialState={this.getInitialState} />
           <Color />
           <OrderingOptions />
           <ShipTo />
